@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#429F6B"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="820px"
+        android:background="@drawable/info_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnReturn2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15px"
+                android:background="#00ff0000"
+                android:text="←"
+                android:textColor="#828282"
+                android:textSize="43px"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15px"
+                android:layout_marginLeft="850px"
+                android:background="#00ff0000"
+                android:drawableStart="@drawable/refresh_btn"
+                android:textColor="#828282"
+                android:textSize="43px"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210px"
+            android:layout_marginTop="8px"
+            android:layout_marginBottom="23px"
+            android:fontFamily="monospace"
+            android:text="Tomato의 상태창"
+            android:textSize="55px"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@drawable/tomato"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15px" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120px"
+        android:layout_marginTop="50px"
+        android:fontFamily="monospace"
+        android:text="Plant"
+        android:textColor="@color/white"
+        android:textSize="58px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120px"
+        android:fontFamily="monospace"
+        android:text="Environment"
+        android:textColor="@color/white"
+        android:textSize="58px"
+        android:textStyle="bold" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="160px"
+                android:layout_marginTop="60px"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_weight="0"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:src="@drawable/temp" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="101px"
+                    android:textSize="45px"
+                    android:text="Temperature  "
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230px"
+                    android:textSize="45px"
+                    android:text="25"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ℃"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="160px"
+                android:layout_marginTop="45px"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_weight="0"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:src="@drawable/humi" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="178px"
+                    android:textSize="45px"
+                    android:text="Humidity"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:id="@+id/humi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230px"
+                    android:textSize="45px"
+                    android:text="25"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" %"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="160px"
+                android:layout_marginTop="45px"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_weight="0"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:src="@drawable/watering" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="94px"
+                    android:textSize="45px"
+                    android:text="Soil Humidity"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:id="@+id/soil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230px"
+                    android:textSize="45px"
+                    android:text="25"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" %"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="160px"
+                android:layout_marginTop="45px"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_weight="0"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:src="@drawable/leaf" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="184px"
+                    android:textSize="45px"
+                    android:text="Disease"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="0"
+                    android:id="@+id/disease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230px"
+                    android:textSize="45px"
+                    android:text="None"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="800px"
+                android:layout_height="650px"
+                android:layout_marginLeft="130px"
+                android:layout_marginTop="60px"
+                android:background="@drawable/plant_day"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:layout_marginTop="20px">
+
+                    <Button
+                        android:id="@+id/btnDay"
+                        android:layout_width="190px"
+                        android:layout_height="60px"
+                        android:background="@drawable/button_border2"
+                        android:text="데이터 출력"
+                        android:textColor="@color/white"
+                        android:textSize="30px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="300px"
+                        android:text="yyyy-mm-dd"
+                        android:textSize="40px"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <ListView
+                    android:layout_marginBottom="30px"
+                    android:id="@+id/listView"
+                    android:layout_width="550px"
+                    android:layout_height="500px"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30px" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

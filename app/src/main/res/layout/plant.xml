@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="15px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnReturn"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            android:text="←"
+            android:textSize="43px"
+            android:textColor="#828282"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280px"
+            android:layout_marginRight="280px"
+            android:text="My Plants"
+            android:textSize="55px" />
+
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pltPic"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:src="@drawable/tomato"
+        android:layout_gravity="center"
+        android:layout_marginTop="50px"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomato"
+        android:textSize="45px"
+        android:layout_marginTop="15px"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
