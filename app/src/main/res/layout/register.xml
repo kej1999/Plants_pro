@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="15px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnReturn2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            android:text="←"
+            android:textColor="#828282"
+            android:textSize="43px"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="350px"
+            android:layout_marginRight="280px"
+            android:text="회원가입"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:paddingTop="300px"
+        android:text="PlantManager"
+        android:textColor="#429F6B"
+        android:textSize="80px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:layout_marginLeft="250px"
+        android:layout_marginBottom="20px"
+        android:paddingTop="100px"
+        android:text="이메일"
+        android:textColor="#429F6B"
+        android:textSize="38px"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtID"
+        android:layout_width="600px"
+        android:layout_height="100px"
+        android:layout_gravity="center"
+        android:paddingLeft="20px"
+        android:background="@drawable/button_border3"
+        android:ems="10"
+        android:hint="이메일"
+        android:textSize="35px"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:layout_marginLeft="250px"
+        android:layout_marginBottom="20px"
+        android:paddingTop="30px"
+        android:text="비밀번호"
+        android:textColor="#429F6B"
+        android:textSize="38px"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="600px"
+        android:layout_height="100px"
+        android:layout_gravity="center"
+        android:paddingLeft="20px"
+        android:background="@drawable/button_border3"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:textSize="35px"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:layout_marginLeft="250px"
+        android:layout_marginBottom="20px"
+        android:paddingTop="30px"
+        android:text="비밀번호 확인"
+        android:textColor="#429F6B"
+        android:textSize="38px"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtChkPW"
+        android:layout_width="600px"
+        android:layout_height="100px"
+        android:layout_gravity="center"
+        android:paddingLeft="20px"
+        android:background="@drawable/button_border3"
+        android:ems="10"
+        android:hint="비밀번호 확인"
+        android:textSize="35px"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnNew"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="60px"
+        android:layout_gravity="center"
+        android:background="@drawable/dialog_btn"
+        android:text="가입하기"
+        android:textColor="@color/white"
+        android:textSize="35px"
+        android:textStyle="bold" />
+
+</LinearLayout>
