@@ -26,30 +26,40 @@
                 android:textSize="43px"
                 android:textStyle="bold" />
 
+
             <Button
+                android:layout_marginLeft="850px"
                 android:id="@+id/btnRefresh"
-                android:layout_width="50dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15px"
-                android:layout_marginLeft="850px"
                 android:background="#00ff0000"
-                android:drawableStart="@drawable/refresh_btn"
-                android:textColor="#828282"
-                android:textSize="43px"
-                android:textStyle="bold" />
+                android:drawableStart="@drawable/refresh_btn" />
         </LinearLayout>
 
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="210px"
-            android:layout_marginTop="8px"
-            android:layout_marginBottom="23px"
-            android:fontFamily="monospace"
-            android:text="Tomato의 상태창"
-            android:textSize="55px"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="285px"
+                android:layout_marginTop="8px"
+                android:layout_marginBottom="23px"
+                android:fontFamily="monospace"
+                android:text="Tomato의 상태창"
+                android:textSize="55px"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnGuide"
+                android:layout_width="26dp"
+                android:layout_marginLeft="20px"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:drawableStart="@drawable/guide_btn" />
+        </LinearLayout>
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:src="@drawable/tomato"
@@ -84,7 +94,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -264,8 +274,8 @@
 
             <LinearLayout
                 android:layout_width="800px"
-                android:layout_height="650px"
-                android:layout_marginLeft="130px"
+                android:layout_height="1000px"
+                android:layout_marginLeft="140px"
                 android:layout_marginTop="60px"
                 android:background="@drawable/plant_day"
                 android:orientation="vertical">
@@ -301,7 +311,7 @@
                     android:layout_marginBottom="30px"
                     android:id="@+id/listView"
                     android:layout_width="550px"
-                    android:layout_height="500px"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginTop="30px" />
             </LinearLayout>
