@@ -79,9 +79,7 @@ public class ContentActivity extends Activity {
         //DB연동
         list = (ListView) findViewById(R.id.listView);
         data = (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE);
-        getData("http://192.168.0.7/PHP_connection.php");
-
-
+        getData("http://192.168.0.3/PHP_connection.php");
 
 
         btnRe.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +115,7 @@ public class ContentActivity extends Activity {
             @Override
             public void onClick(View view) {
                 data = cMonth + "-" + cDay;
-                getData("http://192.168.0.7/PHP_connection.php");
+                getData("http://192.168.0.3/PHP_connection.php");
             }
         });
 

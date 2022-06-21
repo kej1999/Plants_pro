@@ -21,8 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PlantActivity"/>
-        <activity android:name=".ContentActivity"/>
+        <activity android:name=".PlantActivity" android:label="식물 리스트"/>
+        <activity android:name=".ContentActivity" android:label="식물 관련 내용"/>
+        <activity android:name=".LoginActivity" android:label="로그인 창"/>
+        <activity android:name=".RegisterActivity" android:label="회원가입 창"/>
     </application>
 
 </manifest>
