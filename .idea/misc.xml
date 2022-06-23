@@ -6,15 +6,23 @@
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/button_border.xml" value="0.174" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/button_border2.xml" value="0.18" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/button_border3.xml" value="0.2135" />
+        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/button_border4.xml" value="0.2815" />
+        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/camera_btn.xml" value="0.292" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/dialog_btn.xml" value="0.256" />
+        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/disease_btn.xml" value="0.292" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/guide_btn.xml" value="0.237" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/info_border.xml" value="0.163" />
+        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/plant_day.xml" value="0.2815" />
+        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/plant_day2.xml" value="0.2815" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/refresh_btn.xml" value="0.1275" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/activity_main.xml" value="0.3125" />
+        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/disease.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/disease_list.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/list_item.xml" value="0.32592592592592595" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/login.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/plant.xml" value="0.3125" />
-        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/plant_info.xml" value="0.32592592592592595" />
+        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/plant_info.xml" value="0.67" />
+        <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/prescription.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/register.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/layout/test_date.xml" value="0.32592592592592595" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.18" />

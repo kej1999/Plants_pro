@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -18,6 +19,7 @@ import androidx.annotation.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -38,6 +40,7 @@ public class ContentActivity extends Activity {
     TextView txtTemp;
     TextView txtHumi;
     TextView txtSoil;
+    TextView disease;
 
     //DB연동
     String myJSON;
@@ -66,11 +69,14 @@ public class ContentActivity extends Activity {
 
         Button btnRe = (Button) findViewById(R.id.btnReturn2);
         Button btnDay = (Button) findViewById(R.id.btnDay);
+        Button btnCamera = (Button) findViewById(R.id.btnCamera);
         txtView = (TextView) findViewById(R.id.txtView);
         txtTemp = (TextView) findViewById(R.id.temp);
         txtHumi = (TextView) findViewById(R.id.humi);
         txtSoil = (TextView) findViewById(R.id.soil);
         Button btnRefresh = (Button) findViewById(R.id.btnRefresh);
+        Button btnGuide = (Button) findViewById(R.id.btnGuide);
+        disease = (TextView) findViewById(R.id.disease);
 
 
         Calendar cal = Calendar.getInstance();
@@ -79,7 +85,7 @@ public class ContentActivity extends Activity {
         //DB연동
         list = (ListView) findViewById(R.id.listView);
         data = (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE);
-        getData("http://192.168.0.7/PHP_connection.php");
+        getData("http://192.168.0.3/PHP_connection.php");
 
 
         btnRe.setOnClickListener(new View.OnClickListener() {
@@ -115,7 +121,7 @@ public class ContentActivity extends Activity {
             @Override
             public void onClick(View view) {
                 data = cMonth + "-" + cDay;
-                getData("http://192.168.0.7/PHP_connection.php");
+                getData("http://192.168.0.3/PHP_connection.php");
             }
         });
 
@@ -133,6 +139,22 @@ public class ContentActivity extends Activity {
                 }
             }
         });
+//        btnCamera.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                startActivity(intent);
+//            }
+//        });
+
+        btnGuide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PresActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     protected void showList() {

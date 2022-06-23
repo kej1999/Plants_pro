@@ -4,6 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera"/>
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
@@ -25,6 +26,7 @@
         <activity android:name=".ContentActivity" android:label="식물 관련 내용"/>
         <activity android:name=".LoginActivity" android:label="로그인 창"/>
         <activity android:name=".RegisterActivity" android:label="회원가입 창"/>
+        <activity android:name=".PresActivity" android:label="처방전 창"/>
     </application>
 
 </manifest>

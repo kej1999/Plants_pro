@@ -26,6 +26,16 @@
             android:text="My Plants"
             android:textSize="55px" />
 
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            android:text="+"
+            android:textSize="48px"
+            android:textColor="#828282"
+            android:textStyle="normal" />
+
 
     </LinearLayout>
 
