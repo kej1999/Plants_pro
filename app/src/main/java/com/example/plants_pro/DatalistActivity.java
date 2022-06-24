@@ -29,6 +29,7 @@ import java.util.HashMap;
 public class DatalistActivity extends Activity {
     DatePickerDialog dialog;
     TextView txtView;
+
     int cMonth;
     int cDay;
 
@@ -37,15 +38,15 @@ public class DatalistActivity extends Activity {
     String myJSON;
     String date;
 
-    JSONArray peoples = null;
-    ArrayList<HashMap<String, String>> personList;
-    ListView list;
-
     private static final String TAG_RESULTS = "result";
-    private static String TAG_TIME = "time";
+    private static final String TAG_TIME = "time";
     private static final String TAG_TEMP = "temp";
     private static final String TAG_HUMI = "humi";
     private static final String TAG_SOIL = "soil_humi";
+
+    JSONArray peoples = null;
+    ArrayList<HashMap<String, String>> personList;
+    ListView list;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,14 +56,17 @@ public class DatalistActivity extends Activity {
         txtView = (TextView) findViewById(R.id.txtView);
         Button btnReturn4 = (Button) findViewById(R.id.btnReturn4);
         Button btnDate = (Button) findViewById(R.id.btnDate);
-        list = (ListView) findViewById(R.id.date_List);
+
+        Button btnList = (Button) findViewById(R.id.btnList);
 
         Calendar cal = Calendar.getInstance();
 
         txtView.setText(cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.DATE));
         //DB연동
+        list = (ListView) findViewById(R.id.date_List);
         data = (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.DATE);
-        //getData("http://192.168.0.7/PHP_connection.php");
+
+        getData("http://192.168.0.7/PHP_connection.php");
 
         btnDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +88,7 @@ public class DatalistActivity extends Activity {
                 dialog.show();
             }
         });
+
         btnReturn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,82 +96,93 @@ public class DatalistActivity extends Activity {
             }
         });
 
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                data = cMonth + "-" + cDay;
+                getData("http://192.168.0.7/PHP_connection.php");
+            }
+        });
+
+    }
+
+    protected void showList() {
+        try {
+            personList = new ArrayList<HashMap<String, String>>();
+            JSONObject jsonObj = new JSONObject(myJSON);
+            peoples = jsonObj.getJSONArray(TAG_RESULTS);
+
+            for (int i = 0; i < peoples.length(); i++) {
+
+                JSONObject c = peoples.getJSONObject(i);
+
+                String time = c.getString(TAG_TIME);
+                String temp = c.getString(TAG_TEMP);
+                String humi = c.getString(TAG_HUMI);
+                String soil = c.getString(TAG_SOIL);
+
+                HashMap<String, String> persons = new HashMap<String, String>();
+
+                if(time.contains(data)){
+                    persons.put(TAG_TIME, time);
+                    persons.put(TAG_TEMP, temp);
+                    persons.put(TAG_HUMI, humi);
+                    persons.put(TAG_SOIL, soil);
+                    personList.add(persons);
+                }
+
+
+            }
+
+            ListAdapter adapter = new SimpleAdapter(
+                    DatalistActivity.this, personList, R.layout.list_item,
+                    new String[]{TAG_TIME, TAG_TEMP, TAG_HUMI, TAG_SOIL},
+                    new int[]{R.id.Time, R.id.Temp, R.id.Humi, R.id.Soil}
+            );
+            list.setAdapter(adapter);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void getData(String url) {
+        class GetDataJSON extends AsyncTask<String, Void, String> {
+
+            @Override
+            protected String doInBackground(String... params) {
+
+                String uri = params[0];
+
+                BufferedReader bufferedReader = null;
+                try {
+                    URL url = new URL(uri);
+                    HttpURLConnection con = (HttpURLConnection) url.openConnection();
+                    StringBuilder sb = new StringBuilder();
+
+                    bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+
+                    String json;
+                    while ((json = bufferedReader.readLine()) != null) {
+                        sb.append(json + "\n");
+                    }
+
+                    return sb.toString().trim();
+
+                } catch (Exception e) {
+                    return null;
+                }
+
+
+            }
+
+            @Override
+            protected void onPostExecute(String result) {
+                myJSON = result;
+                showList();
+            }
+        }
+        GetDataJSON g = new GetDataJSON();
+        g.execute(url);
     }
 }
-
-//////    protected void showList() {
-//////        try {
-//////            personList = new ArrayList<HashMap<String, String>>();
-//////            JSONObject jsonObj = new JSONObject(myJSON);
-//////            peoples = jsonObj.getJSONArray(TAG_RESULTS);
-//////
-//////            for (int i = 0; i < peoples.length(); i++) {
-//////                JSONObject c = peoples.getJSONObject(i);
-//////                String time = c.getString(TAG_TIME);
-//////                String temp = c.getString(TAG_TEMP);
-//////                String  = c.getString(TAG_HUMI);
-//////                String soil = c.getString(TAG_SOIL);
-//////
-//////                HashMap<String, String> persons = new HashMap<String, String>();
-//////                if(id.contains(data)){
-//////                    persons.put(TAG_TIME, id);
-//////                    persons.put(TAG_TEMP, name);
-//////                    persons.put(TAG_HUMI, address);
-//////                    persons.put(TAG_SOIL,soil);
-//////                    personList.add(persons);
-//////                }
-//////
-//////            }
-////
-////            ListAdapter adapter = new SimpleAdapter(
-////                    DatalistActivity.this, personList, R.layout.list_item,
-////                    new String[]{TAG_TIME, TAG_TEMP, TAG_HUMI,TAG_SOIL},
-////                    new int[]{R.id.Time, R.id.Temp, R.id.Humi,R.id.Soil}
-////            );
-////            list.setAdapter(adapter);
-////
-////        } catch (JSONException e) {
-////            e.printStackTrace();
-////        }
-////    }
-//
-//    public void getData(String url) {
-//        class GetDataJSON extends AsyncTask<String, Void, String> {
-//
-//            @Override
-//            protected String doInBackground(String... params) {
-//
-//                String uri = params[0];
-//
-//                BufferedReader bufferedReader = null;
-//                try {
-//                    URL url = new URL(uri);
-//                    HttpURLConnection con = (HttpURLConnection) url.openConnection();
-//                    StringBuilder sb = new StringBuilder();
-//
-//                    bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-//
-//                    String json;
-//                    while ((json = bufferedReader.readLine()) != null) {
-//                        sb.append(json + "\n");
-//                    }
-//
-//                    return sb.toString().trim();
-//
-//                } catch (Exception e) {
-//                    return null;
-//                }
-//
-//
-//            }
-//
-//            @Override
-//            protected void onPostExecute(String result) {
-//                myJSON = result;
-//                showList();
-//            }
-//        }
-//        GetDataJSON g = new GetDataJSON();
-//        g.execute(url);
-//    }
-//}

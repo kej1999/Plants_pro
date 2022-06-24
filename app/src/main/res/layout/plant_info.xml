@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="120px"
-        android:layout_marginTop="100px"
+        android:layout_marginTop="80px"
         android:fontFamily="monospace"
         android:text="Plant"
         android:textColor="@color/white"
@@ -106,22 +106,23 @@
 
 
     </LinearLayout>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="123px"
+        android:layout_marginBottom="40px"
+        android:text="yyyy-mm-dd"
+        android:textColor="@color/white"
+        android:textSize="40px"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="700px"
-            android:layout_weight="0"
-            android:text="yyyy-mm-dd"
-            android:textColor="@color/white"
-            android:textSize="40px"
-            android:textStyle="bold" />
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -172,7 +173,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="160px"
-            android:layout_marginTop="45px"
+            android:layout_marginTop="50px"
             android:orientation="horizontal">
 
             <ImageView
@@ -216,7 +217,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="160px"
-            android:layout_marginTop="45px"
+            android:layout_marginTop="50px"
             android:orientation="horizontal">
 
 
@@ -261,7 +262,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="160px"
-            android:layout_marginTop="45px"
             android:orientation="horizontal">
 
 
@@ -301,61 +301,6 @@
                 android:background="#00ff0000"
                 android:drawableStart="@drawable/guide_btn" />
         </LinearLayout>
-
-
-        <!--    <ScrollView-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content">-->
-
-        <!--        -->
-
-        <!--            <LinearLayout-->
-        <!--                android:layout_width="800px"-->
-        <!--                android:layout_height="900px"-->
-        <!--                android:layout_marginLeft="140px"-->
-        <!--                android:layout_marginTop="60px"-->
-        <!--                android:background="@drawable/plant_day"-->
-        <!--                android:orientation="vertical">-->
-
-        <!--                <LinearLayout-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_marginLeft="40px"-->
-        <!--                    android:layout_marginTop="20px">-->
-
-        <!--                    <Button-->
-        <!--                        android:id="@+id/btnDay"-->
-        <!--                        android:layout_width="190px"-->
-        <!--                        android:layout_height="60px"-->
-        <!--                        android:background="@drawable/button_border2"-->
-        <!--                        android:text="데이터 출력"-->
-        <!--                        android:textColor="@color/white"-->
-        <!--                        android:textSize="30px"-->
-        <!--                        android:textStyle="bold" />-->
-
-        <!--                    <TextView-->
-        <!--                        android:id="@+id/txtView"-->
-        <!--                        android:layout_width="wrap_content"-->
-        <!--                        android:layout_height="wrap_content"-->
-        <!--                        android:layout_marginLeft="300px"-->
-        <!--                        android:text="yyyy-mm-dd"-->
-        <!--                        android:textColor="@color/white"-->
-        <!--                        android:textSize="40px" />-->
-
-        <!--                </LinearLayout>-->
-
-        <!--                <ListView-->
-        <!--                    android:id="@+id/listView"-->
-        <!--                    android:layout_width="550px"-->
-        <!--                    android:layout_height="match_parent"-->
-        <!--                    android:layout_gravity="center"-->
-        <!--                    android:layout_marginTop="30px"-->
-        <!--                    android:layout_marginBottom="30px" />-->
-        <!--            </LinearLayout>-->
-
-        <!--        </LinearLayout>-->
-
-        <!--    </ScrollView>-->
 
     </LinearLayout>
 </LinearLayout>

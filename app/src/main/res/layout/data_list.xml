@@ -47,12 +47,13 @@
             android:id="@+id/txtView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="680px"
+            android:layout_marginLeft="700px"
+            android:layout_marginRight="10px"
             android:text="yyyy-mm-dd" />
 
         <Button
             android:id="@+id/btnList"
-            android:layout_width="wrap_content"
+            android:layout_width="150px"
             android:layout_height="85px"
             android:text="데이터"
             android:textColor="#828282"
@@ -61,17 +62,14 @@
 
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <ListView
-            android:id="@+id/date_List"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginTop="30px"
-            android:layout_marginBottom="30px" />
-    </ScrollView>
+    <ListView
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:id="@+id/date_List"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px" />
 
 </LinearLayout>
