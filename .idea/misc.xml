@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/android/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Project/android/app/src/main/res/layout/data_list.xml" value="0.35833333333333334" />
+        <entry key="..\:/Project/android/app/src/main/res/layout/plant_info.xml" value="0.35833333333333334" />
+        <entry key="..\:/Project/android/app/src/main/res/layout/prescription.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/button_border.xml" value="0.174" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/button_border2.xml" value="0.18" />
         <entry key="..\:/Users/User/Downloads/Smart_app-master (2)/Smart_app-master/app/src/main/res/drawable/button_border3.xml" value="0.2135" />

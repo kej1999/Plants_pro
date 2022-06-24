@@ -58,5 +58,16 @@
         android:background="@drawable/button_border"
         android:layout_gravity="center"/>
 
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_marginTop="50px"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="테스트"
+        android:background="@drawable/button_border"
+        android:layout_gravity="center"/>
+
 
 </LinearLayout>
