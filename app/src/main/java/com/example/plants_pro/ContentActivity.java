@@ -70,7 +70,6 @@ public class ContentActivity extends Activity {
 
         Button btnDetail = (Button)findViewById(R.id.btnDetail);
         Button btnRe = (Button) findViewById(R.id.btnReturn2);
-        Button btnCamera = (Button) findViewById(R.id.btnCamera);
         txtTime = (TextView) findViewById(R.id.time);
         txtTemp = (TextView) findViewById(R.id.temp);
         txtHumi = (TextView) findViewById(R.id.humi);

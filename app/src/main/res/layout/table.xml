@@ -1,0 +1,75 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:stretchColumns="0,1,2,3">
+
+    <TableLayout
+        android:layout_marginTop="30px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:background="#696969">
+
+            <TextView
+                android:id="@+id/times"
+                android:layout_weight="1"
+                android:padding="30px"
+                android:layout_width="300px"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=" 날짜 "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/temps"
+                android:layout_weight="1"
+                android:padding="30px"
+                android:layout_width="200px"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="온도(℃)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humis"
+                android:layout_weight="1"
+                android:padding="30px"
+                android:layout_width="200px"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="습도(%)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/soils"
+                android:layout_width="250px"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center|center_vertical"
+                android:padding="30px"
+                android:text="토양습도(%)"
+                android:textStyle="bold" />
+
+        </TableRow>
+    </TableLayout>
+
+
+
+</TableLayout>

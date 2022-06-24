@@ -135,9 +135,9 @@ public class DatalistActivity extends Activity {
             }
 
             ListAdapter adapter = new SimpleAdapter(
-                    DatalistActivity.this, personList, R.layout.list_item,
+                    DatalistActivity.this, personList, R.layout.table,
                     new String[]{TAG_TIME, TAG_TEMP, TAG_HUMI, TAG_SOIL},
-                    new int[]{R.id.Time, R.id.Temp, R.id.Humi, R.id.Soil}
+                    new int[]{R.id.times, R.id.temps, R.id.humis, R.id.soils}
             );
             list.setAdapter(adapter);
 
