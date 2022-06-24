@@ -37,6 +37,7 @@ import java.util.concurrent.ExecutionException;
 public class ContentActivity extends Activity {
     TextView txtView;
     DatePickerDialog dialog;
+    TextView txtTime;
     TextView txtTemp;
     TextView txtHumi;
     TextView txtSoil;
@@ -67,10 +68,10 @@ public class ContentActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plant_info);
 
+        Button btnDetail = (Button)findViewById(R.id.btnDetail);
         Button btnRe = (Button) findViewById(R.id.btnReturn2);
-        Button btnDay = (Button) findViewById(R.id.btnDay);
         Button btnCamera = (Button) findViewById(R.id.btnCamera);
-        txtView = (TextView) findViewById(R.id.txtView);
+        txtTime = (TextView) findViewById(R.id.time);
         txtTemp = (TextView) findViewById(R.id.temp);
         txtHumi = (TextView) findViewById(R.id.humi);
         txtSoil = (TextView) findViewById(R.id.soil);
@@ -79,13 +80,12 @@ public class ContentActivity extends Activity {
         disease = (TextView) findViewById(R.id.disease);
 
 
-        Calendar cal = Calendar.getInstance();
-
-        txtView.setText(cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE));
+//        Calendar cal = Calendar.getInstance();
+//
+//        txtView.setText(cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE));
         //DB연동
-        list = (ListView) findViewById(R.id.listView);
-        data = (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE);
-        getData("http://192.168.0.3/PHP_connection.php");
+        //data = (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE);
+        getData("http://192.168.0.7/PHP_connection.php");
 
 
         btnRe.setOnClickListener(new View.OnClickListener() {
@@ -95,35 +95,35 @@ public class ContentActivity extends Activity {
             }
         });
 
-        txtView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int pYear = cal.get(Calendar.YEAR);
-                int pMonth = cal.get(Calendar.MONTH);
-                int pDay = cal.get(Calendar.DAY_OF_MONTH);
+//        txtView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                int pYear = cal.get(Calendar.YEAR);
+//                int pMonth = cal.get(Calendar.MONTH);
+//                int pDay = cal.get(Calendar.DAY_OF_MONTH);
+//
+//                dialog = new DatePickerDialog(ContentActivity.this, new DatePickerDialog.OnDateSetListener() {
+//                    @Override
+//                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+//                        month = month+1;
+//                        cMonth = month;
+//                        cDay = day;
+//                        txtView.setText(year + "-" + month + "-" + day);
+//                    }
+//                },pYear,pMonth,pDay);
+//
+//                dialog.show();
+//            }
+//
+//        });
 
-                dialog = new DatePickerDialog(ContentActivity.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                        month = month+1;
-                        cMonth = month;
-                        cDay = day;
-                        txtView.setText(year + "-" + month + "-" + day);
-                    }
-                },pYear,pMonth,pDay);
-
-                dialog.show();
-            }
-
-        });
-
-        btnDay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = cMonth + "-" + cDay;
-                getData("http://192.168.0.3/PHP_connection.php");
-            }
-        });
+//        btnDay.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                data = cMonth + "-" + cDay;
+//                getData("http://192.168.0.3/PHP_connection.php");
+//            }
+//        });
 
         btnRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,48 +155,61 @@ public class ContentActivity extends Activity {
             }
         });
 
+
+        btnDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), DatalistActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     protected void showList() {
         try {
-            personList = new ArrayList<HashMap<String, String>>();
+            //personList = new ArrayList<HashMap<String, String>>();
             JSONObject jsonObj = new JSONObject(myJSON);
-            peoples = jsonObj.getJSONArray(TAG_RESULTS);
+            //peoples = jsonObj.getJSONArray(TAG_RESULTS);
             MaxPeople = jsonObj.getJSONArray(TAG_RESULTS);
 
             JSONObject a = MaxPeople.getJSONObject(0);
+            String ti = a.getString(TAG_TIME);
             String t = a.getString(TAG_TEMP);
             String h = a.getString(TAG_HUMI);
             String s = a.getString(TAG_SOIL);
+            txtTime.setText(ti);
             txtTemp.setText(t);
             txtHumi.setText(h);
             txtSoil.setText(s);
 
 
-            for (int i = 0; i < peoples.length(); i++) {
-                JSONObject c = peoples.getJSONObject(i);
-                String id = c.getString(TAG_TIME);
-                String name = c.getString(TAG_TEMP);
-                String address = c.getString(TAG_HUMI);
-                String soil = c.getString(TAG_SOIL);
 
-                HashMap<String, String> persons = new HashMap<String, String>();
-                if(id.contains(data)){
-                    persons.put(TAG_TIME, id);
-                    persons.put(TAG_TEMP, name);
-                    persons.put(TAG_HUMI, address);
-                    persons.put(TAG_SOIL,soil);
-                    personList.add(persons);
-                }
-
-            }
-
-            ListAdapter adapter = new SimpleAdapter(
-                    ContentActivity.this, personList, R.layout.list_item,
-                    new String[]{TAG_TIME, TAG_TEMP, TAG_HUMI,TAG_SOIL},
-                    new int[]{R.id.Time, R.id.Temp, R.id.Humi,R.id.Soil}
-            );
-            list.setAdapter(adapter);
+//            for (int i = 0; i < peoples.length(); i++) {
+//                JSONObject c = peoples.getJSONObject(i);
+//                String id = c.getString(TAG_TIME);
+//                String name = c.getString(TAG_TEMP);
+//                String address = c.getString(TAG_HUMI);
+//                String soil = c.getString(TAG_SOIL);
+//
+//                HashMap<String, String> persons = new HashMap<String, String>();
+//                if(id.contains(data)){
+//                    persons.put(TAG_TIME, id);
+//                    persons.put(TAG_TEMP, name);
+//                    persons.put(TAG_HUMI, address);
+//                    persons.put(TAG_SOIL,soil);
+//                    personList.add(persons);
+//                }
+//
+//            }
+//
+//            ListAdapter adapter = new SimpleAdapter(
+//                    ContentActivity.this, personList, R.layout.list_item,
+//                    new String[]{TAG_TIME, TAG_TEMP, TAG_HUMI,TAG_SOIL},
+//                    new int[]{R.id.Time, R.id.Temp, R.id.Humi,R.id.Soil}
+//            );
+//            list.setAdapter(adapter);
 
         } catch (JSONException e) {
             e.printStackTrace();

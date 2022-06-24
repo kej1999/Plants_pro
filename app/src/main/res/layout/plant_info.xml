@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="820px"
+        android:layout_height="850px"
         android:background="@drawable/info_border"
         android:orientation="vertical">
 
@@ -19,7 +19,7 @@
             <Button
                 android:id="@+id/btnReturn2"
                 android:layout_width="50dp"
-                android:layout_height="80px"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10px"
                 android:background="#00ff0000"
                 android:text="←"
@@ -31,7 +31,7 @@
             <Button
                 android:id="@+id/btnRefresh"
                 android:layout_width="26dp"
-                android:layout_height="80px"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="850px"
                 android:layout_marginTop="10px"
                 android:background="#00ff0000"
@@ -55,7 +55,7 @@
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            android:layout_marginTop="5px"
+            android:layout_marginTop="8px"
             android:src="@drawable/tomato" />
 
         <Button
@@ -71,258 +71,291 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="120px"
-        android:layout_marginTop="50px"
+        android:layout_marginTop="100px"
         android:fontFamily="monospace"
         android:text="Plant"
         android:textColor="@color/white"
-        android:textSize="58px"
+        android:textSize="60px"
         android:textStyle="bold" />
 
-    <TextView
+    <LinearLayout
+        android:layout_marginBottom="20px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120px"
+            android:fontFamily="monospace"
+            android:text="Environment"
+            android:textColor="@color/white"
+            android:textSize="60px"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDetail"
+            android:layout_width="190px"
+            android:layout_height="60px"
+            android:layout_marginLeft="300px"
+            android:background="@drawable/button_border2"
+            android:text="상세 데이터"
+            android:textColor="@color/white"
+            android:textSize="30px"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="120px"
-        android:fontFamily="monospace"
-        android:text="Environment"
-        android:textColor="@color/white"
-        android:textSize="58px"
-        android:textStyle="bold" />
+        android:orientation="vertical">
 
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="700px"
+            android:layout_weight="0"
+            android:text="yyyy-mm-dd"
+            android:textColor="@color/white"
+            android:textSize="40px"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="160px"
+            android:layout_marginTop="20px"
+            android:orientation="horizontal">
 
-            <LinearLayout
+
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_weight="0"
+                android:src="@drawable/temp" />
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="160px"
-                android:layout_marginTop="60px"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="101px"
+                android:layout_weight="0"
+                android:text="Temperature  "
+                android:textColor="@color/white"
+                android:textSize="50px"
+                android:textStyle="bold" />
 
-
-                <ImageView
-                    android:layout_width="60px"
-                    android:layout_height="60px"
-                    android:layout_weight="0"
-                    android:src="@drawable/temp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20px"
-                    android:layout_marginRight="101px"
-                    android:layout_weight="0"
-                    android:text="Temperature  "
-                    android:textColor="@color/white"
-                    android:textSize="45px"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/temp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="230px"
-                    android:layout_weight="0"
-                    android:text="25"
-                    android:textColor="@color/white"
-                    android:textSize="45px"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text=" ℃"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="160px"
-                android:layout_marginTop="45px"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="60px"
-                    android:layout_height="60px"
-                    android:layout_weight="0"
-                    android:src="@drawable/humi" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20px"
-                    android:layout_marginRight="178px"
-                    android:layout_weight="0"
-                    android:text="Humidity"
-                    android:textColor="@color/white"
-                    android:textSize="45px"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/humi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="230px"
-                    android:layout_weight="0"
-                    android:text="25"
-                    android:textColor="@color/white"
-                    android:textSize="45px"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text=" %"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/temp"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="160px"
-                android:layout_marginTop="45px"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230px"
+                android:layout_weight="0"
+                android:text="25"
+                android:textColor="@color/white"
+                android:textSize="50px"
+                android:textStyle="bold" />
 
-
-                <ImageView
-                    android:layout_width="60px"
-                    android:layout_height="60px"
-                    android:layout_weight="0"
-                    android:src="@drawable/watering" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20px"
-                    android:layout_marginRight="94px"
-                    android:layout_weight="0"
-                    android:text="Soil Humidity"
-                    android:textColor="@color/white"
-                    android:textSize="45px"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/soil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="230px"
-                    android:layout_weight="0"
-                    android:text="25"
-                    android:textColor="@color/white"
-                    android:textSize="45px"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text=" %"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="160px"
-                android:layout_marginTop="45px"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:layout_width="60px"
-                    android:layout_height="60px"
-                    android:layout_weight="0"
-                    android:src="@drawable/leaf" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20px"
-                    android:layout_marginRight="184px"
-                    android:layout_weight="0"
-                    android:text="Disease"
-                    android:textColor="@color/white"
-                    android:textSize="45px"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/disease"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="230px"
-                    android:layout_weight="0"
-                    android:text="None"
-                    android:textColor="@color/white"
-                    android:textSize="45px"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/btnGuide"
-                    android:layout_width="80px"
-                    android:layout_height="80px"
-                    android:layout_marginLeft="15px"
-                    android:background="#00ff0000"
-                    android:drawableStart="@drawable/guide_btn" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="800px"
-                android:layout_height="900px"
-                android:layout_marginLeft="140px"
-                android:layout_marginTop="60px"
-                android:background="@drawable/plant_day"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40px"
-                    android:layout_marginTop="20px">
-
-                    <Button
-                        android:id="@+id/btnDay"
-                        android:layout_width="190px"
-                        android:layout_height="60px"
-                        android:background="@drawable/button_border2"
-                        android:text="데이터 출력"
-                        android:textColor="@color/white"
-                        android:textSize="30px"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txtView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="300px"
-                        android:text="yyyy-mm-dd"
-                        android:textColor="@color/white"
-                        android:textSize="40px" />
-
-                </LinearLayout>
-
-                <ListView
-                    android:id="@+id/listView"
-                    android:layout_width="550px"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30px"
-                    android:layout_marginBottom="30px" />
-            </LinearLayout>
-
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text=" ℃"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </LinearLayout>
 
-    </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="160px"
+            android:layout_marginTop="45px"
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_weight="0"
+                android:src="@drawable/humi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="178px"
+                android:layout_weight="0"
+                android:text="Humidity"
+                android:textColor="@color/white"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230px"
+                android:layout_weight="0"
+                android:text="25"
+                android:textColor="@color/white"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text=" %"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="160px"
+            android:layout_marginTop="45px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_weight="0"
+                android:src="@drawable/watering" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="94px"
+                android:layout_weight="0"
+                android:text="Soil Humidity"
+                android:textColor="@color/white"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/soil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230px"
+                android:layout_weight="0"
+                android:text="25"
+                android:textColor="@color/white"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text=" %"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="160px"
+            android:layout_marginTop="45px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_weight="0"
+                android:src="@drawable/leaf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="184px"
+                android:layout_weight="0"
+                android:text="Disease"
+                android:textColor="@color/white"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/disease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230px"
+                android:layout_weight="0"
+                android:text="detail"
+                android:textColor="@color/white"
+                android:textSize="50px"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnGuide"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_marginLeft="15px"
+                android:background="#00ff0000"
+                android:drawableStart="@drawable/guide_btn" />
+        </LinearLayout>
+
+
+        <!--    <ScrollView-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content">-->
+
+        <!--        -->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="800px"-->
+        <!--                android:layout_height="900px"-->
+        <!--                android:layout_marginLeft="140px"-->
+        <!--                android:layout_marginTop="60px"-->
+        <!--                android:background="@drawable/plant_day"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_marginLeft="40px"-->
+        <!--                    android:layout_marginTop="20px">-->
+
+        <!--                    <Button-->
+        <!--                        android:id="@+id/btnDay"-->
+        <!--                        android:layout_width="190px"-->
+        <!--                        android:layout_height="60px"-->
+        <!--                        android:background="@drawable/button_border2"-->
+        <!--                        android:text="데이터 출력"-->
+        <!--                        android:textColor="@color/white"-->
+        <!--                        android:textSize="30px"-->
+        <!--                        android:textStyle="bold" />-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtView"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_marginLeft="300px"-->
+        <!--                        android:text="yyyy-mm-dd"-->
+        <!--                        android:textColor="@color/white"-->
+        <!--                        android:textSize="40px" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                <ListView-->
+        <!--                    android:id="@+id/listView"-->
+        <!--                    android:layout_width="550px"-->
+        <!--                    android:layout_height="match_parent"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:layout_marginTop="30px"-->
+        <!--                    android:layout_marginBottom="30px" />-->
+        <!--            </LinearLayout>-->
+
+        <!--        </LinearLayout>-->
+
+        <!--    </ScrollView>-->
+
+    </LinearLayout>
 </LinearLayout>

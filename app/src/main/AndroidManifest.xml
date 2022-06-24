@@ -27,6 +27,7 @@
         <activity android:name=".LoginActivity" android:label="로그인 창"/>
         <activity android:name=".RegisterActivity" android:label="회원가입 창"/>
         <activity android:name=".PresActivity" android:label="처방전 창"/>
+        <activity android:name=".DatalistActivity" android:label="날짜별 데이터"/>
     </application>
 
 </manifest>
