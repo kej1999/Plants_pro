@@ -62,14 +62,77 @@
 
     </LinearLayout>
 
+    <TableLayout
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:background="#696969">
+
+            <TextView
+                android:layout_weight="1"
+                android:padding="30px"
+                android:layout_width="300px"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=" 날짜 "
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_weight="1"
+                android:padding="30px"
+                android:layout_width="200px"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="온도(℃)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_weight="1"
+                android:padding="30px"
+                android:layout_width="200px"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="습도(%)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_weight="1"
+                android:padding="30px"
+                android:layout_width="250px"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="토양습도(%)"
+                android:textStyle="bold" />
+
+        </TableRow>
+    </TableLayout>
+
 
     <ListView
-        android:paddingLeft="50px"
-        android:paddingRight="50px"
         android:id="@+id/date_List"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30px"
-        android:layout_marginBottom="30px" />
+        android:layout_marginBottom="30px"
+        android:paddingLeft="50px"
+        android:paddingRight="50px" />
 
 </LinearLayout>
