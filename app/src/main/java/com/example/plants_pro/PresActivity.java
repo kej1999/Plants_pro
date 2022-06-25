@@ -2,6 +2,7 @@ package com.example.plants_pro;
 
 import android.app.Activity;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,22 +21,31 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class PresActivity extends Activity {
 
     String myJSON;
     JSONArray jsonArray = null;
+    String timeStr;
+    String[] diseaseName = {"Early_blight","Septoria_leaf","Bacterial_spot","Late_blight","Mosaic_virus","Yellow_virus",
+            "Tomato_mold_leaf","spider_mites_leaf"};
+    int[] diseaseOccured = {0,0,0,0,0,0,0,0};
 
-    TextView testText;
-    TextView textText2;
+
+
+
+    TextView resultText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prescription);
 
-        testText = findViewById(R.id.txtTest);
-        textText2 = findViewById(R.id.txtTest2);
+        resultText = findViewById(R.id.resultText);
 
 
         Button btnReturn3 = (Button) findViewById(R.id.btnReturn3);
@@ -45,7 +56,11 @@ public class PresActivity extends Activity {
             }
         });
         getData("http://192.168.0.20/PHP_disease.php");
-
+        Integer diseaseAmount = 0;
+        for (int i = 0; i < diseaseOccured.length; i++) {
+            diseaseAmount += diseaseOccured[i];
+        }
+        resultText.setText(resultText.getText()+diseaseAmount.toString());
     }
 
     public void getData(String url) {
@@ -81,7 +96,6 @@ public class PresActivity extends Activity {
             @Override
             protected void onPostExecute(String result) {
                 myJSON = result;
-                textText2.setText(myJSON);
                 getJSON();
             }
         }
@@ -97,9 +111,10 @@ public class PresActivity extends Activity {
 
             JSONObject row = jsonArray.getJSONObject(0);
 
-            testText.setText(row.getString("dtime"));
-
-
+            timeStr = row.getString("dtime");
+            for (int i = 0; i < diseaseName.length; i++) {
+                diseaseOccured[i] = Integer.parseInt(row.getString(diseaseName[i]));
+            }
 
         } catch (JSONException e) {
             Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
