@@ -85,7 +85,7 @@ public class ContentActivity extends Activity {
 //        txtView.setText(cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE));
         //DB연동
         //data = (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE);
-        getData("http://192.168.0.7/PHP_connection.php");
+        getData("http://192.168.0.3/PHP_connection.php");
 
 
         btnRe.setOnClickListener(new View.OnClickListener() {

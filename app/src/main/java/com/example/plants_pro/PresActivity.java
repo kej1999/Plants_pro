@@ -55,7 +55,7 @@ public class PresActivity extends Activity {
                 finish();
             }
         });
-        getData("http://192.168.0.20/PHP_disease.php");
+        getData("http://192.168.0.3/PHP_disease.php");
         Integer diseaseAmount = 0;
         for (int i = 0; i < diseaseOccured.length; i++) {
             diseaseAmount += diseaseOccured[i];
