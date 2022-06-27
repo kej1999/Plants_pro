@@ -62,9 +62,8 @@
                 android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:gravity="center|center_vertical"
-                android:padding="30px"
-                android:text="토양습도(%)"
+                android:gravity="center"
+                android:text="토양"
                 android:textStyle="bold" />
 
         </TableRow>

@@ -11,16 +11,16 @@
         android:layout_marginTop="60px"
         android:layout_marginBottom="6px"
         android:layout_gravity="center"
-        android:layout_width="600px"
-        android:layout_height="410px"
-        android:src="@drawable/septoria"/>
+        android:layout_width="550px"
+        android:layout_height="440px"
+        android:src="@drawable/leaf_mold"/>
     <TextView
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="60px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Septoria Leaf Spot" />
+        android:text="Leaf Mold" />
     <TextView
         android:layout_marginBottom="50px"
         android:gravity="center"
@@ -28,7 +28,7 @@
         android:textSize="50px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="토마토 점무늬병" />
+        android:text="토마토 잎곰팡이병" />
 
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_width="950px"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
-        android:text="발병 이유: \n고온다습한 시설재배에서 많이 발생하며 증상은 \n병원균 감염 후 5일 이내에 발현"
+        android:text="발병 이유: \n주로 아래 잎에서 피해가 크며 심하면 아랫잎 전체가 \n누렇게 되고 말라죽음"
         android:textSize="40px"
         android:textStyle="bold" />
     <View
@@ -50,7 +50,7 @@
         android:layout_width="950px"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
-        android:text="증상 : \n잎에 회갈색, 암갈색 작은 부정형 반점 형성 작은 반점으로 남아있으나 감염이 심한 잎은 황색으로 변하면서 마르고 조기에 낙엽"
+        android:text="증상 : \n잎 표면에 흰색, 담회색 반점 발생, 잎 뒷면에 \n담갈색 병반이 형성"
         android:textSize="40px"
         android:textStyle="bold" />
 
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
         android:layout_marginBottom="10px"
-        android:text="방제 : \n종자 선별 후 소독하여 파종, 병든 잎은 조기 제거, \n온실재배시 다습하지 않도록 환기조치"
+        android:text="방제 : \n상대습도 90%이상이 되지 않도록 주의, 통풍과 \n밀식 방지, 질소질비료 과용 방지"
         android:textSize="40px"
         android:textStyle="bold" />
 

@@ -35,6 +35,7 @@ import java.util.stream.IntStream;
 public class PresActivity extends AppCompatActivity {
     ViewPager pager;
 
+    String []test = new String[8];
     String myJSON;
     JSONArray jsonArray = null;
     //데이터베이스에서 받아온 시간
@@ -54,22 +55,7 @@ public class PresActivity extends AppCompatActivity {
         setContentView(R.layout.prescription);
 
 
-        //////페이저 생성 , 페이지 추가
-        pager = findViewById(R.id.pager);
-        //페이지 갯수
-        pager.setOffscreenPageLimit(2);
-
-        //페이저 어댑터 클래스
-        MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
-        EarlyBlight fragment1 = new EarlyBlight();
-        adapter.addItem(fragment1);
-        SeptoriaLeaf framgent2 = new SeptoriaLeaf();
-        adapter.addItem(framgent2);
-
-        pager.setAdapter(adapter);
-        //////////////////////////////////
-
-
+        getData("http://192.168.0.3/PHP_disease.php");
 
         resultText = findViewById(R.id.resultText);
         for (int i = 0; i < diseaseText.length; i++) {
@@ -77,21 +63,15 @@ public class PresActivity extends AppCompatActivity {
             diseaseText[i] = findViewById(getResources().getIdentifier("txtDisease" + i, "id", this.getPackageName()));
         }
 
-
         Button btnReturn3 = (Button) findViewById(R.id.btnReturn3);
-        getData("http://192.168.0.3/PHP_disease.php");
-        Integer diseaseAmount = 0;
-//        for (int i = 0; i < 8; i++) {
-//            Integer rapInt = diseaseOccurred[i];
-//            testText.setText(rapInt.toString());
-//            diseaseAmount += diseaseOccurred[i];
-//        }
+        Button btnDis = (Button) findViewById(R.id.btnDis);
 
-        //resultText.setText(resultText.getText()+diseaseAmount.toString());
-
-
-
-
+        btnDis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onStart();
+            }
+        });
 
         btnReturn3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,9 +79,56 @@ public class PresActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        //////페이저 생성 , 페이지 추가
+        pager = findViewById(R.id.pager);
+        //페이지 갯수
+        pager.setOffscreenPageLimit(diseaseNum);
+
+        //페이저 어댑터 클래스
+        MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
+        EarlyBlight fragment1 = new EarlyBlight();
+        SeptoriaLeaf fragment2 = new SeptoriaLeaf();
+        BacterialSpot fragment3 = new BacterialSpot();
+        LateBlight fragment4 = new LateBlight();
+        MosaicVirus fragment5 = new MosaicVirus();
+        YellowLeaf fragment6 = new YellowLeaf();
+        LeafMold fragment7 = new LeafMold();
+        TwoSpotted fragment8 = new TwoSpotted();
 
 
 
+        if(diseaseOccurred[0] == 1) {
+            adapter.addItem(fragment1);
+        }
+        if(diseaseOccurred[1] == 1){
+            adapter.addItem(fragment2);
+        }
+        if(diseaseOccurred[2] == 1){
+            adapter.addItem(fragment3);
+        }
+        if(diseaseOccurred[3] == 1){
+            adapter.addItem(fragment4);
+        }
+        if(diseaseOccurred[4] == 1){
+            adapter.addItem(fragment5);
+        }
+        if(diseaseOccurred[5] == 1){
+            adapter.addItem(fragment6);
+        }
+        if(diseaseOccurred[6] == 1){
+            adapter.addItem(fragment7);
+        }
+        if(diseaseOccurred[7] == 1){
+            adapter.addItem(fragment8);
+        }
+
+        pager.setAdapter(adapter);
+        //////////////////////////////////
+        super.onStart();
     }
 
     public void getData(String url) {
@@ -153,11 +180,12 @@ public class PresActivity extends AppCompatActivity {
             JSONObject row = jsonArray.getJSONObject(0);
 
             timeStr = row.getString("dtime");
+
             for (int i = 0; i < diseaseName.length; i++) {
-                diseaseOccurred[i] = Integer.parseInt(row.getString(diseaseName[i]));
-                diseaseNum += diseaseOccurred[i];
+                this.diseaseOccurred[i] = Integer.parseInt(row.getString(diseaseName[i]));
+                this.diseaseNum += this.diseaseOccurred[i];
             }
-            resultText.setText(resultText.getText()+new Integer(diseaseNum).toString());
+            resultText.setText(resultText.getText()+new Integer(this.diseaseNum).toString());
 
         } catch (JSONException e) {
             Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();

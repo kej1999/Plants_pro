@@ -11,16 +11,16 @@
         android:layout_marginTop="60px"
         android:layout_marginBottom="6px"
         android:layout_gravity="center"
-        android:layout_width="600px"
-        android:layout_height="410px"
-        android:src="@drawable/septoria"/>
+        android:layout_width="700px"
+        android:layout_height="390px"
+        android:src="@drawable/yello_virus"/>
     <TextView
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="60px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Septoria Leaf Spot" />
+        android:text="Mosaic Virus" />
     <TextView
         android:layout_marginBottom="50px"
         android:gravity="center"
@@ -28,7 +28,7 @@
         android:textSize="50px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="토마토 점무늬병" />
+        android:text="토마토 황화잎말림 바이러스" />
 
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_width="950px"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
-        android:text="발병 이유: \n고온다습한 시설재배에서 많이 발생하며 증상은 \n병원균 감염 후 5일 이내에 발현"
+        android:text="발병 이유: \n잎의 크기는 작고 비정상적인 형태로 심하게 위축, \n착과 정지"
         android:textSize="40px"
         android:textStyle="bold" />
     <View
@@ -50,7 +50,7 @@
         android:layout_width="950px"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
-        android:text="증상 : \n잎에 회갈색, 암갈색 작은 부정형 반점 형성 작은 반점으로 남아있으나 감염이 심한 잎은 황색으로 변하면서 마르고 조기에 낙엽"
+        android:text="증상 : \n감염된 잎은 황화 및 잎말림, 줄기는 위축, 꽃은 개화가 \n어렵고 열매는 착색 불량"
         android:textSize="40px"
         android:textStyle="bold" />
 
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
         android:layout_marginBottom="10px"
-        android:text="방제 : \n종자 선별 후 소독하여 파종, 병든 잎은 조기 제거, \n온실재배시 다습하지 않도록 환기조치"
+        android:text="방제 : \n생육 초기에 검은 비닐봉지를 씌워 발병주 제거 예방"
         android:textSize="40px"
         android:textStyle="bold" />
 

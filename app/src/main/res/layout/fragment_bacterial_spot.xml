@@ -11,16 +11,16 @@
         android:layout_marginTop="60px"
         android:layout_marginBottom="6px"
         android:layout_gravity="center"
-        android:layout_width="600px"
-        android:layout_height="410px"
-        android:src="@drawable/septoria"/>
+        android:layout_width="550px"
+        android:layout_height="420px"
+        android:src="@drawable/bacterial_spot"/>
     <TextView
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="60px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Septoria Leaf Spot" />
+        android:text="Bacterial spot" />
     <TextView
         android:layout_marginBottom="50px"
         android:gravity="center"
@@ -28,7 +28,7 @@
         android:textSize="50px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="토마토 점무늬병" />
+        android:text="토마토 세균성점무늬병" />
 
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_width="950px"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
-        android:text="발병 이유: \n고온다습한 시설재배에서 많이 발생하며 증상은 \n병원균 감염 후 5일 이내에 발현"
+        android:text="발병 이유: \n어린 과실에만 발생하며 성숙과에는 발생하지 않음, \n3~5월 사이 환기가 불량하고 다습한 시설재배에서 \n주로 발생"
         android:textSize="40px"
         android:textStyle="bold" />
     <View
@@ -50,7 +50,7 @@
         android:layout_width="950px"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
-        android:text="증상 : \n잎에 회갈색, 암갈색 작은 부정형 반점 형성 작은 반점으로 남아있으나 감염이 심한 잎은 황색으로 변하면서 마르고 조기에 낙엽"
+        android:text="증상 : \n담갈색, 암갈색의 수침상에 소반점 발생, 병반 부위 표피가 붕괴되어 거칠어지고 더뎅이 모양"
         android:textSize="40px"
         android:textStyle="bold" />
 
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
         android:layout_marginBottom="10px"
-        android:text="방제 : \n종자 선별 후 소독하여 파종, 병든 잎은 조기 제거, \n온실재배시 다습하지 않도록 환기조치"
+        android:text="방제 : \n종자소독(50℃ 물에 25분간 침지), 배수가 잘 되는 \n비옥한 토지 선택, 급격한 온도변화에 주의"
         android:textSize="40px"
         android:textStyle="bold" />
 

@@ -33,6 +33,7 @@ class MyPagerAdapter extends FragmentStatePagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return "페이지" + position;
+        return "페이지 " + (position+1);
     }
+
 }

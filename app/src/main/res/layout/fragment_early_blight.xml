@@ -3,12 +3,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EarlyBlight">
+    tools:context=".EarlyBlight"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_marginTop="60px"
+        android:layout_marginBottom="6px"
+        android:layout_gravity="center"
+        android:layout_width="550px"
+        android:layout_height="550px"
+        android:src="@drawable/early_blight"/>
+    <TextView
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="60px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="early_blight" />
+    <TextView
+        android:layout_marginBottom="50px"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="50px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="토마토 겹무늬병" />
+
+
+    <TextView
+        android:layout_marginBottom="10px"
+        android:layout_width="950px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70px"
+        android:text="발병 이유: \n온도와 습도가 높을 때 쉽게 발생 / 잎, 줄기, 과실에 발생"
+        android:textSize="40px"
+        android:textStyle="bold" />
+    <View
+        android:layout_marginBottom="20px"
+        android:layout_gravity="center"
+        android:layout_width="970px"
+        android:layout_height="3px"
+        android:background="#AAAAAA"/>
+    <TextView
+        android:layout_marginBottom="10px"
+        android:layout_width="950px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70px"
+        android:text="증상 : \n잎, 줄기, 과실에 발생 감염 부위에 타원형의 갈색반점에서 시작되어 진전되면 암갈색 겹무늬반점으로 확대"
+        android:textSize="40px"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_marginBottom="20px"
+        android:layout_gravity="center"
+        android:layout_width="970px"
+        android:layout_height="3px"
+        android:background="#AAAAAA"/>
+
+    <TextView
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70px"
+        android:layout_marginBottom="10px"
+        android:text="방제 : \n병든 식물은 조기 제거, 조생종 재배, 종자소독, 통풍과 투광 용이한 환경 조성"
+        android:textSize="40px"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="early_blight" />
+        android:layout_height="wrap_content"
+        android:id="@+id/text"/>
 
 </LinearLayout>

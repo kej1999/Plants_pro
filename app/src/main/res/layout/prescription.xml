@@ -22,28 +22,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="275px"
-            android:layout_marginRight="280px"
+            android:layout_marginRight="180px"
             android:text="현재 질병 내역"
             android:textSize="45px" />
+
+        <Button
+            android:id="@+id/btnDis"
+            android:background="@drawable/dialog_btn"
+            android:layout_width="180px"
+            android:layout_height="70px"
+            android:textColor="@color/white"
+            android:textSize="35px"
+            android:text="질병 내역"/>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginBottom="30px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
+            android:textStyle="bold"
             android:id="@+id/resultText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="50px"
             android:text="검출된 질병이 "/>
 
         <TextView
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="50px"
             android:text=" 건 있습니다."/>
 
     </LinearLayout>
@@ -56,7 +69,7 @@
         <androidx.viewpager.widget.PagerTitleStrip
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#55cedf"
+            android:background="#429F6B"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"/>
     </androidx.viewpager.widget.ViewPager>

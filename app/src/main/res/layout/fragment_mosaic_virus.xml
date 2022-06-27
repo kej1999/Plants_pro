@@ -13,14 +13,14 @@
         android:layout_gravity="center"
         android:layout_width="600px"
         android:layout_height="410px"
-        android:src="@drawable/septoria"/>
+        android:src="@drawable/mosaic"/>
     <TextView
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="60px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Septoria Leaf Spot" />
+        android:text="Mosaic Virus" />
     <TextView
         android:layout_marginBottom="50px"
         android:gravity="center"
@@ -28,7 +28,7 @@
         android:textSize="50px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="토마토 점무늬병" />
+        android:text="토마토 모자이크 바이러스" />
 
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_width="950px"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
-        android:text="발병 이유: \n고온다습한 시설재배에서 많이 발생하며 증상은 \n병원균 감염 후 5일 이내에 발현"
+        android:text="발병 이유: \n날개 달린 진딧물에 의해 전염되고 확산(접촉전염)"
         android:textSize="40px"
         android:textStyle="bold" />
     <View
@@ -50,7 +50,7 @@
         android:layout_width="950px"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
-        android:text="증상 : \n잎에 회갈색, 암갈색 작은 부정형 반점 형성 작은 반점으로 남아있으나 감염이 심한 잎은 황색으로 변하면서 마르고 조기에 낙엽"
+        android:text="증상 : \n잎이 가늘어지면서 고사리 형태로 변형, 감염 식물체는 \n위축되고 줄기 또는 열매에 괴사 증상"
         android:textSize="40px"
         android:textStyle="bold" />
 
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="70px"
         android:layout_marginBottom="10px"
-        android:text="방제 : \n종자 선별 후 소독하여 파종, 병든 잎은 조기 제거, \n온실재배시 다습하지 않도록 환기조치"
+        android:text="방제 : \n외부로부터 날아오는 유시 진딧물 철저히 차단하는 \n물리적 방제, 시설재배 시 하우스 내부 또는 주변에 \n진딧물 서식지가 될 수 있는 잡초 제거"
         android:textSize="40px"
         android:textStyle="bold" />
 

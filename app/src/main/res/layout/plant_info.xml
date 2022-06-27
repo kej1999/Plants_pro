@@ -93,7 +93,7 @@
             android:layout_height="60px"
             android:layout_marginLeft="290px"
             android:background="@drawable/button_border2"
-            android:text="상세 데이터"
+            android:text="센서 데이터"
             android:textColor="@color/white"
             android:textSize="30px"
             android:textStyle="bold" />
@@ -286,11 +286,11 @@
                 android:id="@+id/disease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="230px"
+                android:layout_marginLeft="140px"
                 android:layout_weight="0"
-                android:text="detail"
+                android:text="질병 데이터"
                 android:textColor="@color/white"
-                android:textSize="50px"
+                android:textSize="40px"
                 android:textStyle="bold" />
 
             <Button
