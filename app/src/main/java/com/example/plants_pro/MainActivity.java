@@ -14,9 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Button btnLogin = (Button) findViewById(R.id.btnLogin);
-//        Button btnRegister = (Button) findViewById(R.id.btnRegister);
-          Button btnMain = (Button) findViewById(R.id.btnMain);
+        Button btnMain = (Button) findViewById(R.id.btnMain);
 
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,13 +23,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        btnRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(),RegisterActivity.class);
-//                startActivity(intent);
-//            }
-//        });
     }
 
 
